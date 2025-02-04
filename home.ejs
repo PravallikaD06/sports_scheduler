@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Sports | Home</title>
+    <style>
+    body {
+       font-family: 'Verdana', sans-serif;
+       background: url('https://magazine.sportihome.com/wp-content/uploads/2021/07/quel-sport-choisir-.jpg') no-repeat center center/cover;
+       margin: 0;
+       padding: 0;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       min-height: 100vh;
+       color: rgb(241, 234, 234);
+       text-align: center;
+       }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            max-width: 850px;
+        }
+
+        .title {
+            font-size: 75px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .tagline {
+            font-size: 24px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 50px;
+            color: #f0f5f7;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 18px 35px;
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(13, 9, 9);
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.3s ease-in-out;
+            display: inline-block;
+            text-transform: uppercase;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-register {
+            background: #ececd6;
+        }
+        
+        .btn-register:hover {
+            background: #bebec7;
+            transform: translateY(-4px);
+        }
+
+        .btn-login {
+            background: #ececd6;
+            color: #07080a;
+        }
+
+        .btn-login:hover {
+            background: #bebec7;
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Elite Sports</div>
+        <div class="tagline">Empowering Athletes, Simplifying Management</div>
+
+        <div class="buttons">
+            <a href="/register" class="btn btn-register">Register</a>
+            <a href="/login" class="btn btn-login">Login</a>
+        </div>
+    </div>
+</body>
+</html>

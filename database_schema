@@ -1,0 +1,35 @@
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(50) CHECK (role IN ('admin', 'player')) NOT NULL
+);
+
+
+CREATE TABLE sports (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) UNIQUE NOT NULL
+);
+
+
+CREATE TABLE sessions (
+    id SERIAL PRIMARY KEY,
+    sport_id INT REFERENCES sports(id),
+    created_by INT REFERENCES users(id),
+    team1_players TEXT[],
+    team2_players TEXT[],
+    additional_players INT,
+    date_time TIMESTAMP NOT NULL,
+    venue TEXT NOT NULL,
+    status VARCHAR(50) CHECK (status IN ('upcoming', 'cancelled', 'completed')) DEFAULT 'upcoming',
+    reason TEXT DEFAULT NULL
+);
+
+
+CREATE TABLE session_participants (
+    id SERIAL PRIMARY KEY,
+    session_id INT REFERENCES sessions(id),
+    user_id INT REFERENCES users(id),
+    UNIQUE (session_id, user_id)
+);

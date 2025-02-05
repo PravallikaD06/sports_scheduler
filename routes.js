@@ -273,6 +273,4 @@ router.post('/change-password', isAuthenticated, async (req, res) => {
     }
 });
 
-
-
 module.exports = router;
